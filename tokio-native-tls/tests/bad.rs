@@ -42,7 +42,7 @@ cfg_if! {
                             not(target_os = "windows"),
                             not(target_os = "ios"))))] {
         fn verify_failed(err: &Error) {
-            assert!(format!("{}", err).contains("certificate verify failed"))
+            assert!(format!("{}", err).contains("X509CertVerifyFailed"))
         }
 
         use verify_failed as assert_expired_error;

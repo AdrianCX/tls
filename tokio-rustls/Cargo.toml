@@ -24,7 +24,7 @@ logging = ["rustls/logging"]
 tls12 = ["rustls/tls12"]
 
 [dev-dependencies]
-tokio = { version = "1.0", features = ["full"] }
+tokio = { version = "1.15", features = ["macros", "rt", "rt-multi-thread", "net"] }
 futures-util = "0.3.1"
 lazy_static = "1"
 webpki-roots = "0.22"

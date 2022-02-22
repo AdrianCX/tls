@@ -29,7 +29,7 @@ cfg_if! {
         fn assert_bad_hostname_error(err: &io::Error) {
             let err = err.get_ref().unwrap();
             let err = err.downcast_ref::<native_tls::Error>().unwrap();
-            assert!(format!("{}", err).contains("certificate verify failed"));
+            assert!(format!("{}", err).contains("X509CertVerifyFailed"));
         }
     } else if #[cfg(any(target_os = "macos", target_os = "ios"))] {
         fn assert_bad_hostname_error(err: &io::Error) {

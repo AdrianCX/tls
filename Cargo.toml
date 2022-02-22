@@ -5,3 +5,7 @@ members = [
     "tokio-rustls/examples/client",
     "tokio-rustls/examples/server"
 ]
+
+[patch.crates-io]
+mio = { git = "https://github.com/mzohreva/mio", branch = "mz/sgx-port-0.7.6" }
+tokio = { git = "https://github.com/fortanix/tokio.git", branch = "raoul/tokio-1.15.0-sgx" }
